@@ -43,26 +43,7 @@ The ZIP file also contains a file `denim` that reminds the original repository U
 
 ### Setup
 
-- [Install NodeJS](https://nodejs.org/fr/download).
-- [Install Docker Desktop](https://docs.docker.com/desktop/windows/install/).
-- Open the project in an IDE and install the dependencies.
-  ```shell
-  npm install
-  ```
-- Create an `.env` file with the following content.
-  ```shell
-  # Windows
-  FILE_SYSTEM_SEPARATOR="\"
-  ```
-  ```shell
-  # Linux
-  FILE_SYSTEM_SEPARATOR="/"
-  ```
-- Launch the application.
-  ```shell
-  npm run start
-  ```
-  The app runs at [http://localhost:3000](http://localhost:3000).
+See [INSTALL file](INSTALL.md).
 
 ### Test the app (manually)
 
@@ -107,21 +88,6 @@ The configuration of Jest is stated in the `/package.json` file.
   ```bash
   npm run test_integration
   ```
-
-### Dockerize the application
-
-The project contains a `Dockerfile` at its root in order to create an image of the application.
-
-A `docker-compose.yml` file also exists at the root in order to launch easily a container for the application.
-
-- Build the image and launch the container.
-
-  ```bash
-  docker-compose up
-  ```
-
-⚠️ This command must be executed at the location of the `docker-compose.yml` file and have to be run as with the 
-right privileges (administrator).
 
 ### Documentation
 
