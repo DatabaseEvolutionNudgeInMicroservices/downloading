@@ -1,570 +1,490 @@
 {
-	"info": {
-		"_postman_id": "399fec52-d00c-4f1e-8287-6df43fdf48a2",
-		"name": "DENIM Downloading Tests",
-		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "30513630"
-	},
-	"item": [
-		{
-			"name": ":8080/git 200 TEMP",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/username/repository/tree/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 200 one-element repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 200 multi-element repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/chat/tree/9d16f0751b627d5a967ffd6b29c8b69bba8b159b\",\r\n    \"https://github.com/overleaf/clsi/tree/06d24e08ce5bbafd00b9d4dca18049b9f91d6263\",\r\n    \"https://github.com/overleaf/contacts/tree/3eb8b1baebe7bb41092b9fc7fd50ff28993d6a32\",\r\n    \"https://github.com/overleaf/docstore/tree/03779eb1884d1cc546616b647987919c7e8cc3fb\",\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\",\r\n    \"https://github.com/overleaf/filestore/tree/bc11e208f3b659534e52aa312401e6e708d27243\",\r\n    \"https://github.com/overleaf/writelatex-git-bridge/tree/1f9e8afae2f20dbaa245ae4685c9349ea2798e9c\",\r\n    \"https://github.com/overleaf/notifications/tree/26394c22018193e07742e14b8a27e35511d51bcb\",\r\n    \"https://github.com/overleaf/real-time/tree/f896afaa99a50dfd515f4e1057faeca5a29b4878\",\r\n    \"https://github.com/overleaf/spelling/tree/d982797ff232685ea36838804fed25b8f0183135\",\r\n    \"https://github.com/overleaf/track-changes/tree/1ae78b60d1acb227b145a92722b5431a09387106\",\r\n    \"https://github.com/overleaf/access-token-encryptor/tree/6668521d61004c0b473213408a577953a7f71bdf\",\r\n    \"https://github.com/overleaf/logger-module/tree/a84d08974c729d4f3a7c63b755d119846dd61691\",\r\n    \"https://github.com/overleaf/metrics-module/tree/08be393709d9bca4221dc9d05653cfd1b5935a7b\",\r\n    \"https://github.com/overleaf/o-error/tree/9d0619b6a59225f0e2a941923fea1fa7d5621961\",\r\n    \"https://github.com/overleaf/object-persistor/tree/70e22b3dac51c87169434c8f09da9632bf7b8ec0\",\r\n    \"https://github.com/overleaf/redis-wrapper/tree/6a5b2e39d1f3afa650b32cf62be9eb4f3f504c21\",\r\n    \"https://github.com/overleaf/settings-module/tree/0e8f3640983d087d837b42e7ef631e03272dabc1\",\r\n    \"https://github.com/overleaf/web/tree/aea26fe3135d01a5c218cd42dcb0229ab1fad3ac\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 406 null or undefined repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "text"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 406 empty repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 406 repository list with null repositories",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    null\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 406 repository list with empty repository",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 404 repository list with not found repositories",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/unknown/unknown/tree/aaa\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 406 repository list without hash",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/document-updater/\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":8080/git 404 repository list with not found hash",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/aaa\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:8080/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git TEMP",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/username/repository/tree/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 200 one-element repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 200 multi-element repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/chat/tree/9d16f0751b627d5a967ffd6b29c8b69bba8b159b\",\r\n    \"https://github.com/overleaf/clsi/tree/06d24e08ce5bbafd00b9d4dca18049b9f91d6263\",\r\n    \"https://github.com/overleaf/contacts/tree/3eb8b1baebe7bb41092b9fc7fd50ff28993d6a32\",\r\n    \"https://github.com/overleaf/docstore/tree/03779eb1884d1cc546616b647987919c7e8cc3fb\",\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\",\r\n    \"https://github.com/overleaf/filestore/tree/bc11e208f3b659534e52aa312401e6e708d27243\",\r\n    \"https://github.com/overleaf/writelatex-git-bridge/tree/1f9e8afae2f20dbaa245ae4685c9349ea2798e9c\",\r\n    \"https://github.com/overleaf/notifications/tree/26394c22018193e07742e14b8a27e35511d51bcb\",\r\n    \"https://github.com/overleaf/real-time/tree/f896afaa99a50dfd515f4e1057faeca5a29b4878\",\r\n    \"https://github.com/overleaf/spelling/tree/d982797ff232685ea36838804fed25b8f0183135\",\r\n    \"https://github.com/overleaf/track-changes/tree/1ae78b60d1acb227b145a92722b5431a09387106\",\r\n    \"https://github.com/overleaf/access-token-encryptor/tree/6668521d61004c0b473213408a577953a7f71bdf\",\r\n    \"https://github.com/overleaf/logger-module/tree/a84d08974c729d4f3a7c63b755d119846dd61691\",\r\n    \"https://github.com/overleaf/metrics-module/tree/08be393709d9bca4221dc9d05653cfd1b5935a7b\",\r\n    \"https://github.com/overleaf/o-error/tree/9d0619b6a59225f0e2a941923fea1fa7d5621961\",\r\n    \"https://github.com/overleaf/object-persistor/tree/70e22b3dac51c87169434c8f09da9632bf7b8ec0\",\r\n    \"https://github.com/overleaf/redis-wrapper/tree/6a5b2e39d1f3afa650b32cf62be9eb4f3f504c21\",\r\n    \"https://github.com/overleaf/settings-module/tree/0e8f3640983d087d837b42e7ef631e03272dabc1\",\r\n    \"https://github.com/overleaf/web/tree/aea26fe3135d01a5c218cd42dcb0229ab1fad3ac\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 406 null or undefined repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "",
-					"options": {
-						"raw": {
-							"language": "text"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 406 empty repository list",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 406 repository list with null repositories",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    null\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 406 repository list with empty repository",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 404 repository list with not found repositories",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/unknown/unknown/tree/aaa\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 406 repository list without hash",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/document-updater/\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": ":3000/git 404 repository list with not found hash",
-			"request": {
-				"method": "POST",
-				"header": [],
-				"body": {
-					"mode": "raw",
-					"raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/aaa\"\r\n]",
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
-				},
-				"url": {
-					"raw": "http://localhost:3000/git",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "3000",
-					"path": [
-						"git"
-					]
-				}
-			},
-			"response": []
-		}
-	]
+  "info": {
+    "_postman_id": "399fec52-d00c-4f1e-8287-6df43fdf48a2",
+    "name": "DENIM Downloading Tests",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "30513630"
+  },
+  "item": [
+    {
+      "name": ":8080/git 200 TEMP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/username/repository/tree/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 200 one-element repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 200 multi-element repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/chat/tree/9d16f0751b627d5a967ffd6b29c8b69bba8b159b\",\r\n    \"https://github.com/overleaf/clsi/tree/06d24e08ce5bbafd00b9d4dca18049b9f91d6263\",\r\n    \"https://github.com/overleaf/contacts/tree/3eb8b1baebe7bb41092b9fc7fd50ff28993d6a32\",\r\n    \"https://github.com/overleaf/docstore/tree/03779eb1884d1cc546616b647987919c7e8cc3fb\",\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\",\r\n    \"https://github.com/overleaf/filestore/tree/bc11e208f3b659534e52aa312401e6e708d27243\",\r\n    \"https://github.com/overleaf/writelatex-git-bridge/tree/1f9e8afae2f20dbaa245ae4685c9349ea2798e9c\",\r\n    \"https://github.com/overleaf/notifications/tree/26394c22018193e07742e14b8a27e35511d51bcb\",\r\n    \"https://github.com/overleaf/real-time/tree/f896afaa99a50dfd515f4e1057faeca5a29b4878\",\r\n    \"https://github.com/overleaf/spelling/tree/d982797ff232685ea36838804fed25b8f0183135\",\r\n    \"https://github.com/overleaf/track-changes/tree/1ae78b60d1acb227b145a92722b5431a09387106\",\r\n    \"https://github.com/overleaf/access-token-encryptor/tree/6668521d61004c0b473213408a577953a7f71bdf\",\r\n    \"https://github.com/overleaf/logger-module/tree/a84d08974c729d4f3a7c63b755d119846dd61691\",\r\n    \"https://github.com/overleaf/metrics-module/tree/08be393709d9bca4221dc9d05653cfd1b5935a7b\",\r\n    \"https://github.com/overleaf/o-error/tree/9d0619b6a59225f0e2a941923fea1fa7d5621961\",\r\n    \"https://github.com/overleaf/object-persistor/tree/70e22b3dac51c87169434c8f09da9632bf7b8ec0\",\r\n    \"https://github.com/overleaf/redis-wrapper/tree/6a5b2e39d1f3afa650b32cf62be9eb4f3f504c21\",\r\n    \"https://github.com/overleaf/settings-module/tree/0e8f3640983d087d837b42e7ef631e03272dabc1\",\r\n    \"https://github.com/overleaf/web/tree/aea26fe3135d01a5c218cd42dcb0229ab1fad3ac\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 406 null or undefined repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 406 empty repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 406 repository list with null repositories",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    null\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 406 repository list with empty repository",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 404 repository list with not found repositories",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/unknown/unknown/tree/aaa\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 406 repository list without hash",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/document-updater/\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":8080/git 404 repository list with not found hash",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/aaa\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8080",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git TEMP",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/username/repository/tree/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 200 one-element repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 200 multi-element repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/chat/tree/9d16f0751b627d5a967ffd6b29c8b69bba8b159b\",\r\n    \"https://github.com/overleaf/clsi/tree/06d24e08ce5bbafd00b9d4dca18049b9f91d6263\",\r\n    \"https://github.com/overleaf/contacts/tree/3eb8b1baebe7bb41092b9fc7fd50ff28993d6a32\",\r\n    \"https://github.com/overleaf/docstore/tree/03779eb1884d1cc546616b647987919c7e8cc3fb\",\r\n    \"https://github.com/overleaf/document-updater/tree/b9011d28a698d9310d2c4b7d9b85f925ae23c865\",\r\n    \"https://github.com/overleaf/filestore/tree/bc11e208f3b659534e52aa312401e6e708d27243\",\r\n    \"https://github.com/overleaf/writelatex-git-bridge/tree/1f9e8afae2f20dbaa245ae4685c9349ea2798e9c\",\r\n    \"https://github.com/overleaf/notifications/tree/26394c22018193e07742e14b8a27e35511d51bcb\",\r\n    \"https://github.com/overleaf/real-time/tree/f896afaa99a50dfd515f4e1057faeca5a29b4878\",\r\n    \"https://github.com/overleaf/spelling/tree/d982797ff232685ea36838804fed25b8f0183135\",\r\n    \"https://github.com/overleaf/track-changes/tree/1ae78b60d1acb227b145a92722b5431a09387106\",\r\n    \"https://github.com/overleaf/access-token-encryptor/tree/6668521d61004c0b473213408a577953a7f71bdf\",\r\n    \"https://github.com/overleaf/logger-module/tree/a84d08974c729d4f3a7c63b755d119846dd61691\",\r\n    \"https://github.com/overleaf/metrics-module/tree/08be393709d9bca4221dc9d05653cfd1b5935a7b\",\r\n    \"https://github.com/overleaf/o-error/tree/9d0619b6a59225f0e2a941923fea1fa7d5621961\",\r\n    \"https://github.com/overleaf/object-persistor/tree/70e22b3dac51c87169434c8f09da9632bf7b8ec0\",\r\n    \"https://github.com/overleaf/redis-wrapper/tree/6a5b2e39d1f3afa650b32cf62be9eb4f3f504c21\",\r\n    \"https://github.com/overleaf/settings-module/tree/0e8f3640983d087d837b42e7ef631e03272dabc1\",\r\n    \"https://github.com/overleaf/web/tree/aea26fe3135d01a5c218cd42dcb0229ab1fad3ac\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 406 null or undefined repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "text"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 406 empty repository list",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 406 repository list with null repositories",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    null\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 406 repository list with empty repository",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 404 repository list with not found repositories",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/unknown/unknown/tree/aaa\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 406 repository list without hash",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/document-updater/\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": ":3000/git 404 repository list with not found hash",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "[\r\n    \"https://github.com/overleaf/document-updater/tree/aaa\"\r\n]",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:3000/git",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "3000",
+          "path": ["git"]
+        }
+      },
+      "response": []
+    }
+  ]
 }

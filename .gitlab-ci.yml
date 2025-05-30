@@ -59,7 +59,7 @@ integration-testing:
     - develop # Restricts the unit testing to the develop branch.
   variables:
     GIT_STRATEGY: none # Skips the 'git fetch'.
-  needs: [ unit-testing ]
+  needs: [unit-testing]
   script:
     - echo "--Integration testing--"
     - Set-Content .env 'FILE_SYSTEM_SEPARATOR="/"' # Sets the file system separator environment variable for Linux.

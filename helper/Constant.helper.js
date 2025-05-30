@@ -1,6 +1,6 @@
 // Libraries
 
-const dotenv = require('dotenv');
+const dotenv = require('dotenv')
 
 /**
  * @overview Represents the helper constants.
@@ -8,14 +8,14 @@ const dotenv = require('dotenv');
 
 // Configuration
 
-dotenv.config();
+dotenv.config()
 
 // Constants
 
-const FILE_SYSTEM_SEPARATOR = process.env.FILE_SYSTEM_SEPARATOR;
-const TEMP_FOLDER_NAME = 'TEMP';
+const FILE_SYSTEM_SEPARATOR = process.env.FILE_SYSTEM_SEPARATOR
+const TEMP_FOLDER_NAME = 'TEMP'
 
 module.exports = {
-    FILE_SYSTEM_SEPARATOR,
-    TEMP_FOLDER_NAME,
+  FILE_SYSTEM_SEPARATOR,
+  TEMP_FOLDER_NAME
 }

@@ -1,10 +1,12 @@
 # DENIM Downloading
 
-## Description
+[![pipeline status](https://gitlab.unamur.be/denim/downloading/badges/master/pipeline.svg)](https://gitlab.unamur.be/denim/downloading/-/commits/master)
+
+## 📣 Description
 
 This application enables to download repositories.
 
-## Features
+## ⭐ Features
 
 Here is a summary of the features currently supported.
 
@@ -16,7 +18,7 @@ The git download enables to retrieve one or several git repositories at once, ea
 
 #### How to?
 
-**__INPUT__**
+**INPUT**
 
 Invoke the git download by using the [POST /git](http://locahost:3000/git) route with the following input object.
 
@@ -34,12 +36,12 @@ This one represent the list of GitHub/GitLab repositories to download, specific 
 
 ⚠️ Please respect the input object format.
 
-**__OUTPUT__**
+**OUTPUT**
 
 The result of the download is a ZIP file containing as many directories as there are repositories.
 The ZIP file also contains a file `denim` that reminds the original repository URL.
 
-## Development details
+## 👩‍💻 Development details
 
 ### Setup
 
@@ -51,6 +53,8 @@ Manual test suites are set up thanks through the [Postman](https://www.postman.c
 
 The tests are specified in the `/test/manual` directory and are named following the `*.test.js` pattern.
 
+⚠️ Make sure that the "maximum response size" in Postman is increased, for example to 1000 MB. `Postman > Settings > General > Max response size > 1000 MB`.
+
 ### Test the app (unit testing)
 
 Unit test suites are set up thanks to the [Jest](https://www.npmjs.com/package/jest) framework.
@@ -60,6 +64,8 @@ The tests are specified in the `/test/unit` directory and are named following th
 The configuration of Jest is stated in the `/package.json` file.
 
 The tests running computes the code coverage.
+
+⚠️ Make sure that test suites are run from a terminal outside an IDE and when no IDE is running with the project open. This will prevent erroneous tests. Indeed, since the tool downloads the git repository in the source files, the IDE that display sources could put a lock on the `.git` directory to update their VCS extensions.
 
 #### Launching the tests
 
@@ -106,39 +112,67 @@ A CI/CD process is set up thanks to GitLab CI/CD.
 Learn more about GitLab CI/CD via [this page](https://docs.gitlab.com/ee/ci/).
 
 This one is described in the `.gitlab-ci.yml`.
-Warning! Right privileges must be granted to Docker on the session on which the CI is executed.
+⚠️ Right privileges must be granted to Docker on the session on which the CI is executed.
 
-## Technical details
+### Linting
+
+- Lint the application.
+
+  ```sh
+  npm run lint
+  ```
+
+### Formatting
+
+- Formatting the application.
+
+  ```sh
+  npm run format
+  ```
+
+## 🪛 Technical details
 
 ### Technologies
 
-* JavaScript
-* Docker
+- JavaScript
+- Docker
 
 ### Libraries
 
+#### Files
+
+- [archiver](https://www.npmjs.com/package/archiver) is used for generating ZIP files.
+
 #### Project configuration
 
-* [expressjs](https://www.npmjs.com/package/express) is a backend NodeJS framework.
-* [body-parser](https://www.npmjs.com/package/body-parser) is used for parsing REST API request body.
+- [expressjs](https://www.npmjs.com/package/express) is a backend NodeJS framework.
+- [body-parser](https://www.npmjs.com/package/body-parser) is used for parsing REST API request body.
+- [cors](https://www.npmjs.com/package/cors) is used for managing CORS.
+- [dotenv](https://www.npmjs.com/package/dotenv) is used for retrieving environment variables.
 
 #### Tests
 
-* [Jest](https://www.npmjs.com/package/jest) is used for unit testing.
-* [SuperTest](https://www.npmjs.com/package/supertest) is used for integration testing.
+- [Jest](https://www.npmjs.com/package/jest) is used for unit testing.
+- [SuperTest](https://www.npmjs.com/package/supertest) is used for integration testing.
 
 #### Documentation
 
-* [swagger-autogen](https://www.npmjs.com/package/swagger-autogen) is used for Swagger documentation.
-* [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express) is used UI Swagger documentation.
-
-#### Files
-
-* [archiver](https://www.npmjs.com/package/archiver) is used for generating ZIP files.
+- [swagger-autogen](https://www.npmjs.com/package/swagger-autogen) is used for Swagger documentation.
+- [swagger-ui-express](https://www.npmjs.com/package/swagger-ui-express) is used UI Swagger documentation.
 
 ### Tools
 
-* [npm](https://www.npmjs.com/) is the package manager used.
-* [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) is the CI/CD continuous tool used.
-* [Docker Desktop](https://docs.docker.com/desktop/windows/install/) is the containerization technology used.
-* [Postman](https://www.postman.com/) is the tool for testing manually the API.
+- [npm](https://www.npmjs.com/) is the package manager used.
+- [GitLab CI/CD](https://docs.gitlab.com/ee/ci/) is the CI/CD continuous tool used.
+- [Docker Desktop](https://docs.docker.com/desktop/windows/install/) is the containerization technology used.
+- [Postman](https://www.postman.com/) is the tool for testing manually the API.
+
+## 🤝 Contributing
+
+If you want to contribute to the project, please consider the following instructions:
+
+- Any contribution must be tested (unit and integration tests).
+- All the tests and the CI/CD pipeline must pass before definitively integrating the contribution.
+- Any contribution must be documented, especially by updating the `README.md` and the `INSTALL.md` file.
+- Any contribution must be approved via the pull request mechanism.
+- More generally, any contribution must follow the conventions and keep the shape of previous contributions.
