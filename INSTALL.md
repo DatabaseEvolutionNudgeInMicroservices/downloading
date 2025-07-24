@@ -20,7 +20,7 @@ You have the two following options.
 
 #### Launching from Docker Hub (preferred)
 
-- TODO: link to DockerHub
+- [Docker Hub repository](https://hub.docker.com/r/maxiandr/denim-downloading).
 
 #### Launching from source code
 
